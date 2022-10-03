@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>The DOM</title>
-  <link rel="stylesheet" href="../../base.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> traversing</title>
+    <link rel="stylesheet" href="../../base.css">
+   
 </head>
-
 <body>
-  <div class="items">
-    <p>Hi I'm a item</p>
-    <div>
-      <h2>Sub Div</h2>
-      <p>Hi I'm a item</p>
-
+    <p class="wes"> I am Wes, I <em> love</em> to bbq and <strong> Make websites!</strong></p>
+    <img class="nice cool" src="https://picsum.photos/500"/>
+    <div class="items">
+        <div class="item">
+        <img class="custom" data-last="Bos" data-name="Wes" src="https://picsum.photos/200"/>
+        <img data-name="Kait" src="https://picsum.photos/200"/>
+        <img data-name="Lux" src="https://picsum.photos/200"/>
+        <p>Hi I'm a item</p>
     </div>
-    <img src="https://source.unsplash.com/random/300x300" />
-    <p>Hi I'm a item</p>
-    <p>Hi I'm a item</p>
-  </div>
-</body>
+        <div class="item item2">
+            <img src="https://picsum.photos/200"/>
+            <h2>I am a heading   
+                <span> I am a hidden! </span>
+            </h2>
+            
+            <p>Hi I'm a item</p>
+        </div>
+        <article class="item">
+            <h2>I'm an article</h2>
+            <p class="pizza"> This is now many pizzas I ate! </p>
+        </article>
+    
+        <p>Hi I'm a item</p> 
+        <p>Hi I'm a item</p>
+    </div>
+    <style>
+        h2 span {
+            display: none;
+        }
+        
+        img {
+            transition: all 0.2s;
+           
+        }
+        
+        body {
+  font-size: 20px;
+  text-align: center;
+  padding: 0 calc(50% - 590px); 
+  background-color: black;
+  color: white;
+        }      
 
+        .round {
+            border-radius: 50%;
+            transform: rotate(1turn) scale(2);
+            box-shadow: 0 0 10px white;
+           
+        }
+        ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+        
+    </style>
+    <script src="./traversing.js"></script>
+    </body>
 </html>
+    

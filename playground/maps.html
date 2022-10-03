@@ -5,13 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Maps</title>
-  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./base.css">
 </head>
 
 <body>
+    <ul class="prizes"></ul>
+
   <script>
+
+    const person1 = {
+        name: 'Wes',
+        age: 200
+    };
+
+  const myMap = new Map();
+  //.set()
+  myMap.set('name', 'Wes');
+  myMap.set(100, 'This is a number');
+  myMap.set(person1, 'Really Cool');
+  console.log(myMap);
+
+  //console.log(myMap.get(person1))
+  //console.log(myMap.get(100))
+
+  const score = 300;
+  const prizes = new Map();
+  prizes.set(100, 'Bear');
+  prizes.set(200, 'Duck');
+  prizes.set(300, 'Car');
+  console.log(`you win a ${prizes.get(score)}`);
+ 
+  // select that ul
+
+  const ul = document.querySelector('.prizes');
+//   prizes.forEach(entry => {
+//      console.log(entry);
+//    })
+
+for (const [points, prize] of prizes) {
+    const li = `<li>${points} - ${prize}</li>`;
+    ul.insertAdjacentHTML('beforeend', li);
+}
+
+  //.has()
+  //.delete()
+
 
   </script>
 </body>
 
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
