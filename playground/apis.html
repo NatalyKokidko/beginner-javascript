@@ -9,7 +9,37 @@
 </head>
 
 <body>
+  <p class="user"></p>
+
   <script>
+
+
+const baseEndpoint = 'https://api.github.com';
+const userEndpoint = `${baseEndpoint}/users`;
+const userEl = document.querySelector('.user');
+
+async function displayUser(username) {
+  userEl.textContent = 'loading....';
+const response= await fetch(`${userEndpoint}/${username}`);
+const data = await response.json();
+//wesPromise.then(response => {
+//   return response.json();
+// }).then(data => {
+  console.log(data);
+  console.log(data.blog);
+  console.log(data.name);
+  console.log(data.location);
+ userEl.textContent = `${data.name} - ${data.blog}`;
+}
+
+    function handleError(err) {
+      console.log('OH NO!');
+      console.log(err);
+      user.textContent = `Somthing went wrong: ${err}` 
+    }
+
+displayUser('stolinski').catch(handleError);
+
 
   </script>
 </body>
