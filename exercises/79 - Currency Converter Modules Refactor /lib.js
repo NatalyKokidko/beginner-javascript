@@ -1,4 +1,4 @@
-const endpoint = 'https://api.exchangeratesapi.io/latest';
+const endpoint = 'https://api.frankfurter.app/latest';
 const ratesByBase = {};
 
 export async function fetchRates(base = 'USD') {
