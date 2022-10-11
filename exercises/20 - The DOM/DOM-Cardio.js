@@ -1,5 +1,5 @@
 const div = document.createElement('div');
-div.classList.add('wripper');
+div.classList.add('wrapper');
 document.body.appendChild(div);
 
 const ul = `<ul>
